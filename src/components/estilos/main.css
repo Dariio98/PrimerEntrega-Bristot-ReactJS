@@ -1,3 +1,19 @@
 .greetingContainer {
     margin: 2rem;
 }
+
+.containProducts {
+    display: flex;
+    gap: 3rem;
+
+}
+
+.cardProducts {
+    background-color: #fb2;
+    border: 3px solid black;
+    width: 20rem;
+}
+
+.cardProducts .cardProducts-img {
+    width: 20rem;
+}
