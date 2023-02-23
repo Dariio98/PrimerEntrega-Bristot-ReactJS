@@ -12,9 +12,9 @@ export const  ItemListContainer = () => {
         <>
         <div className='greetingContainer'>
             <h2>{greeting}</h2>
+
             <div className='containProducts'>
             <ItemList  />
-
             </div>
         </div>
         </>

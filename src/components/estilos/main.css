@@ -4,6 +4,7 @@
 
 .containProducts {
     display: flex;
+    flex-wrap: wrap;
     gap: 3rem;
 
 }
@@ -16,4 +17,5 @@
 
 .cardProducts .cardProducts-img {
     width: 20rem;
+    height: 15rem;
 }

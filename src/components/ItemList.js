@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./estilos/itemList.css";
-import stock from "./stock";
 
 export const ItemList = () => {
-    console.log(stock.products);
+    const [products, setProducts] = useState([]);
+    useEffect(() => {
+        fetch('./stock.json')
+            .then(resp =>resp.json())
+            .then(data => console.log(data))
+            .catch((e) => console.log(e))
+    }, []);
     return (
         <>
-
         {
-            stock.products.map((product) => (<div key= {product.id} className="cardProducts">
+            products.map((product) => (<div key= {product.id} className="cardProducts">
                 <img className="cardProducts-img" src={product.img} alt={product.nombre} />
                 <h2 className="cardProducts-text">{product.nombre}</h2>
                 <p>{product.precio}</p>        
